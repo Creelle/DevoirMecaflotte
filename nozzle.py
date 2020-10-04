@@ -24,12 +24,27 @@ y2 = y1[-1]+np.tan(alpha*pi/180)*(x2-x1_fin)
 x3= np.linspace(x3_deb,Ox3,1000)
 y3 = yadd + Oy3 + np.sqrt(r3**2-(x3-Ox3)**2)
 
-plt.plot(x1,y1,'-b')
-plt.plot(x1,-y1,'-b')
-plt.plot(x2,y2,'-r')
-plt.plot(x2,-y2,'-r')
-plt.plot(x3,y3,'-g')
-plt.plot(x3,-y3,'-g')
+def nozzle_height(x):
+    if x<=x1_fin:
+        y= yadd + r1 - np.sqrt(r1**2-(x-x_throat)**2)
+    elif(x>=x3_deb):
+        y=yadd + Oy3 + np.sqrt(r3**2-(x-Ox3)**2)
+    else:
+        y=y1[-1]+np.tan(alpha*pi/180)*(x-x1_fin)
+    return y
+x=np.linspace(0,120,1000)
+y= np.zeros(len(x))
+for i in range(len(y)):
+    y[i]= nozzle_height(x[i])
+
+# plt.plot(x1,y1,'-b')
+# plt.plot(x1,-y1,'-b')
+# plt.plot(x2,y2,'-r')
+# plt.plot(x2,-y2,'-r')
+# plt.plot(x3,y3,'-g')
+# plt.plot(x3,-y3,'-g')
+plt.plot(x,y,'-c')
+plt.plot(x,-y,'-c')
 plt.grid()
 plt.xlim((0,120))
 plt.ylim((-8,8))
