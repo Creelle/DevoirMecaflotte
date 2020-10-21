@@ -7,6 +7,7 @@ fanno flows
 
 def critical_lenghth(M):
     return 1/1.4*((1-M**2)/M**2+1.2*np.log(1.2*M**2/(1+0.2*M**2)))
+print(critical_lenghth(0.24))
 def inv_critical_length(a,M_2): # lambda*(x2-x1)/Dh = f(M1)-f(M2) so a either  lambda*(x2-x1)/Dh+f(M2) or a= f(M1)- lambda*(x2-x1)/Dh
     """
     returns M_2 is M**2  and not M ==> a changer je pense qu il y a un probleme

@@ -111,13 +111,13 @@ Mx = useful.inv_air_ratio(air_ratios,0.5*np.ones(len(x)))
 px = p_0i/((1+0.2*Mx**2)**(1.4/0.4))
 
 np.savetxt("results\homework_a_nozzle.txt",np.stack((x,Mx,px,p_0i*ones)))
-fig, ax = plt.subplots()
-ax.set_title('a nozzle')
-ax.plot(x,Mx,'-b',label='M')
-ax.plot(x,px,'-r',label='p[bar]')
-ax.plot(x,p_0i*ones,'-c',label='p0[bar]')
-ax.legend()
-ax.grid()
+# fig, ax = plt.subplots()
+# ax.set_title('a nozzle')
+# ax.plot(x,Mx,'-b',label='M')
+# ax.plot(x,px,'-r',label='p[bar]')
+# ax.plot(x,p_0i*ones,'-c',label='p0[bar]')
+# ax.legend()
+# ax.grid()
 
 
 #b) duct
