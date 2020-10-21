@@ -4,7 +4,7 @@ import useful
 from matplotlib import pyplot as plt
 
 #données de base
-
+# hello world
 h_throat = 0.003 #3mm
 h_duct = 0.0075 #7.5 mm
 length_nozzle = 0.12
