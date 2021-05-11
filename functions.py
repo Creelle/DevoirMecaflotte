@@ -20,6 +20,7 @@ def ratio_A_star_over_A_super(A_star, A, M):
         iter += 1
         M = M_new
     return M, error, iter
+print(ratio_A_star_over_A_super(1,1.84,2))
 
 def f(M):
     return 1/gamma*((1-M**2)/M**2 + 1.2*np.log(1.2*M**2/(1+0.2*M**2)))

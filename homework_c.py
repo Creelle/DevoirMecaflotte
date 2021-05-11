@@ -78,6 +78,7 @@ po2 = p2*(T0/T2)**(1.4/0.4)
 po2_star = po2/(1/M2*((1+0.2*M2**2)/1.2)**(3))
 p_star2 = p2*M2/(1.2/(1+0.2*M2**2))**(1.2/0.4)
 print('po_star chequ', poe_star, po2_star)
+print('pstar chequ',p_star,p_star2)
 print('conditions inlet duct - after shock', M2,u2,T2,p2,po2)
 
 
